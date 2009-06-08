@@ -1,0 +1,20 @@
+#ifndef __CLASS_PROTO__
+#define __CLASS_PROTO__
+
+gint  class_name_match (gconstpointer a,gconstpointer b);
+gint  class_name_wild_match (gconstpointer a,gconstpointer b);
+void class_command(const char *arg, struct session* ses);
+void unclass_command(const char *arg, struct session* ses);
+GSList* class_list_copy (GSList *list);
+GSList *class_list_find(GSList *list,char *cln);
+GSList *class_list_append(GSList *list,char *cln);
+GSList *class_list_delete(GSList *list,GSList *link);
+void class_list_clean(GSList *nptr);
+
+#define DEFAULT_CLASS_NAME "_default_"
+#define GSL_CLASS_NAME(l) (((struct class_s *)((l)->data))->name)
+#define GSL_CLASS_ENABLE(l) (((struct class_s *)((l)->data))->enable)
+
+extern GSList *common_classes;
+
+#endif

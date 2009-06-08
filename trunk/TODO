@@ -1,0 +1,28 @@
+#  -*- mode: Outline; fill-column: 72; -*-
+
+* Fri Apr  9 12:43:53 2004
+
+- 多个Ticker
+- Status line bug 修复（linux）
+- Status line 要改进（支持自动更新，可以从变量读取，还有支持颜色）
+- Loop 跳出
+- 还有改进/sleep，这个问题比较麻烦一点，sleep在loop中是不起作用得
+- RegEx 规则表达式
+- 数组的支持
+- variable赋值方式更改，$ddd=xxx就行了
+- 调试信息输出，运行ytin的时候输出相关信息到log文件，方便定位问题
+- 增加脚本格式转换命令programout，可以将原有的脚本按照比较好的编程风格输出到文件，方便阅读。
+- 增加类的支持
+- 支持多个定时器
+- ytin的内核好像不支持同一行触发的两个trigger同时生效，建议增加开关选项
+- 增加zmud脚本到ytin脚本的转换命令zmudtoytin，并输出到指定文件
+- 增加max和min内建函数
+- 增加返回最后n行输出的命令getlastline，事前需要设置缓存多少行，然后可以读出。
+- 增加自动连线的函数atconnect，atconnsize，原来用dummy session方法实现太土了。
+- 用#xxx来切换session太土了，如果我有个session叫var，岂不无法切换？
+- 底层需要返回一个tcp连接多久没有回应的数字。用来判断网络的状况，使得用户可以做一些抗网络异常的机器人
+- 集成perl然后为用户封装出一些函数，方便写脚本
+- 自动语法检查
+- retype command的问题
+- '>'的问题
+- 内部变量的问题（增加zmud的）

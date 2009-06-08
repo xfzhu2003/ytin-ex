@@ -1,0 +1,7 @@
+#ifndef __LOG_PROTO__
+#define __LOG_PROTO__
+/* ../log.c */
+extern void logit(struct session* &ses, const char *b);
+void lograw(struct session* &ses, const char *b, int l);
+
+#endif // __LOG_PROTO__

@@ -1,0 +1,19 @@
+/nop
+/chr ctrlG 7
+/chr {_ESC} {27}
+/al showg {/showme {${_ESC}}[32m%0${_ESC}[2;37;0m}
+                            
+/action {^#TICK!!!} {tick};/al tick time
+/ticksize 300
+
+/purist;/mess read;/mess highlight;/mess sub;/mess action;/mess alias;/mess var
+
+/nop when we new a player we need close speedwalk function
+/toggle speedwalk 2
+
+/cd tri;/cd ../tri
+/read ansi.sc
+/read func.sc
+/read class.sc
+/read data.sc
+/read trigger.sc
